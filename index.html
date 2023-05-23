@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <title>Cake ThyD _ Trang Chủ</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          margin: 0;
+        }
+        
+        .header {
+          padding: 10px;
+          background-image: url('banh.png');
+          color: rgb(0, 0, 0);
+          padding-left: 40px;
+        }
+        
+        .header h1 {
+          font-size: 40px;
+        }
+        
+        .navbar {
+          overflow: hidden;
+          background-color: #e1dada;
+          color: black;
+        }
+        
+        .navbar .search-container {
+            float: right;
+        }
+        .navbar .search-container button {
+            float: right;
+            padding: 6px 10px;  
+            margin-top: 8px;
+            margin-right: 26px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        } 
+        .navbar input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: none;
+        }
+
+        .navbar a {
+          float: left;
+          display: block;
+          color: black;
+          text-align: center;
+          padding: 14px 20px;
+          text-decoration: none;
+        }
+        
+        .navbar a.right {
+          float: right;
+        }
+        #shopping{
+          float: right;
+          padding: 6px 6px;  
+          margin-top: 2px;
+          margin-right: 16px;
+        }
+        .navbar a:hover {
+          background-color: #e3b2c8;
+          color: black;
+        }
+        
+        .row {  
+          display: -ms-flexbox; 
+          display: flex;
+          -ms-flex-wrap: wrap; 
+          flex-wrap: wrap;
+        }
+        
+        .side {
+          -ms-flex: 30%; 
+          flex: 30%;
+          background-color: #f1f1f1;
+          padding: 20px;
+        }
+        
+        .main {   
+          -ms-flex: 70%; 
+          flex: 70%;
+          background-color: white;
+          padding: 20px;
+        }
+
+        .fakeimg {
+          background-color: #aaa;
+          width: 100%;
+          padding: 20px;
+        }
+        
+        .footer {
+          color: white;
+          background:  #1e2524;
+        }
+        .gioithieu{
+          padding: 20px;
+          width: 500px;
+          height: 200px;
+          background:  #1e2524;
+          float: left;
+          padding-left: 120px;
+        }
+        .lienhe{
+          padding: 20px;
+          width: 500px;
+          height: 200px;
+          background:  #1e2524;
+          float: left;
+          padding-left: 40px;
+        }
+        .thanhtoan{
+          padding: 20px;
+          width: 500px;
+          height: 200px;
+          background:  #1e2524;
+          float: left;
+          padding-left: 40px;
+        }
+
+        @media screen and (max-width: 600px) {
+          .row {   
+            flex-direction: column;
+          }
+        }
+        
+        @media screen and (max-width: 600px) {
+          .navbar a {
+            float: none;
+            width: 100%;
+          }
+        }
+        @media screen and (max-width: 600px) {
+            .navbar .search-container {
+                float: none;
+            }
+            .navbar .search-container button {
+                float: none;
+                display: block;
+                text-align: left;
+                width: 100%;
+                margin: 0;
+                padding: 14px;
+            }
+        }
+
+        
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+        .text {
+          color: #f2f2f2;
+          background-color: #000000;
+          font-size: 25px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
+        .dot {
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 1.2s ease;
+        }
+        .active {
+          background-color: #717171;
+        }
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+      <img src="logo.png"  width="7%">
+        <a style="font-size: 50px;">Cake ThyD</a>
+    </div>
+    
+    <div class="navbar">
+        <a href="#">TRANG CHỦ</a>
+        <a href="danhmuc.html">DANH MỤC</a>
+        <a href="gioithieu.html">GIỚI THIỆU SINH VIÊN VÀ DỰ ÁN</a>
+        <a href="dangky.html" class="right">Đăng ký</a>
+        <a id="shopping" class="fas fa-shopping-cart fa-2x" style="color: #000000;" href="giohang.html"></a>
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fas fa-search" style="color: #000000;"></i></button>
+            </form>
+        </div>
+        
+    </div>
+    <div class="row">
+      <div class="side">
+        <h2>Sản phẩm bán chạy</h2>
+        <h5>Cập nhật những sản phẩm bán chạy nhất từ Cake ThyD</h5>
+        <img src="muffin.jpg" style="width:100%">
+        <p>Muffin chocolate là một trong những loại bánh ngon nhất của dòng Muffin. Người ta thường ấn tượng với những chiếc bánh này bởi hương vị mê hoặc, độ mềm xốp cao. </p>
+        <br />
+        <img src="banhmuoibien.png" style="width:100%">
+        <p>Hương vị kem phô mai beo béo, mằn mặn xen lẫn lớp bông lan mềm nhẹ, ngọt thanh giúp cân bằng hương vị tạo nên món bánh thơm ngon, tuyệt hảo</p>
+      </div>
+      <div class="main">
+        <h2>KHUYẾN MÃI HOT <i class="far fa-hand-point-right" style="color: #f70808;"></i> <i style="color: red;">GIẢM 15%</i></h2>
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <img src="banhcuonsocola.jpg" style="width:100%">
+            <div class="text">Bánh cuộn Socola</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <img src="donutsocola.jpg" style="width:100%">
+            <div class="text">Bánh donut socola</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <img src="banhquyhanhnhan.jpg" style="width:100%">
+            <div class="text">Bánh quy hạnh nhân</div>
+          </div>
+          
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+          </div>
+          
+          <script>
+          let slideIndex = 0;
+          showSlides();
+          
+          function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+          }
+          </script>
+        <br>
+        <h2>SẮP RA MẮT</h2>
+        <img src="banhtrung.jpg" style="width:100%">
+        <p>💥Bánh Trứng Chảy</p>
+        <p>
+          💯 Chưa bao giờ em thấy bánh nào giá hợp lý mà ngon như này, nhân trứng chảy thì ngập tràn nhưng ăn mãi ko ngán
+          <br />
+          👉🏻 Đơn giản vì nhân trứng chảy xịn, ko bị ngọt lẹm như các loại khác trên thị trường đâu. Kèm theo vẫn là lớp vỏ nướng giòn rụm, điểm thêm vừng đen làm điểm nhấn. </p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="gioithieu">
+        <h3>GIỚI THIỆU </h3>
+      <a style="font-size: 13px;">Mua bánh ngọt siêu ngon ở HCM tại Cake ThyD</a>
+        <br />
+      </div>
+      <div class="lienhe">
+        <h3>LIÊN HỆ</h3>
+        <i class="fas fa-phone-alt" style="color: #ffffff;"></i>
+        <a style="font-size: 13px;">0359041476 hoặc 0954989541</a>
+        <br />
+        <i class="fas fa-envelope" style="color: #ffffff;"></i>
+        <a style="font-size: 13px;">cake.thuyd@gmail.com</a>
+        <br />
+        <i class="fas fa-store" style="color: #ffffff;"></i>
+        <a style="font-size: 13px;">25 Nguyễn Đỗ Cung, phường Tây Thạnh, quận Tân Phú, TP.HCM</a>
+
+      </div>
+      <div class="thanhtoan">
+        <h3>PHƯƠNG THỨC THANH TOÁN</h3>
+        <img src="1.png">
+        <img src="2.png">
+        <img src="3.png">
+      </div>
+    </div>
+</body>
+</html>

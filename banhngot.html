@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <title>Bánh ngọt</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          margin: 0;
+        }
+        
+        .header {
+          padding: 10px;
+          background-image: url('banh.png');
+          color: rgb(0, 0, 0);
+          padding-left: 40px;
+        }
+        
+        .header h1 {
+          font-size: 40px;
+        }
+        
+        .navbar {
+          overflow: hidden;
+          background-color: #e1dada;
+          color: black;
+        }
+        
+        .navbar .search-container {
+            float: right;
+        }
+        .navbar .search-container button {
+            float: right;
+            padding: 6px 10px;  
+            margin-top: 8px;
+            margin-right: 26px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        } 
+        .navbar input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: none;
+        }
+
+        .navbar a {
+          float: left;
+          display: block;
+          color: black;
+          text-align: center;
+          padding: 14px 20px;
+          text-decoration: none;
+        }
+        
+        .navbar a.right {
+          float: right;
+        }
+        #shopping{
+          float: right;
+          padding: 6px 6px;  
+          margin-top: 2px;
+          margin-right: 16px;
+        }
+        .navbar a:hover {
+          background-color: #e3b2c8;
+          color: black;
+        }
+        
+        .row {  
+          display: -ms-flexbox; 
+          display: flex;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+        }
+        
+        .side {
+          -ms-flex: 30%; 
+          flex: 30%;
+          background-color: #f1f1f1;
+          padding: 20px;
+          padding-left: 70px;
+        }
+        
+        .main {   
+          -ms-flex: 70%; /* IE10 */
+          flex: 70%;
+          background-color: white;
+          padding: 20px;
+        }
+
+        .fakeimg {
+          background-color: #aaa;
+          width: 100%;
+          padding: 20px;
+        }
+        
+        .footer {
+          color: white;
+          background:  #1e2524;
+        }
+        .gioithieu{
+          padding: 20px;
+          width: 500px;
+          height: 200px;
+          background:  #1e2524;
+          float: left;
+          padding-left: 120px;
+        }
+        .lienhe{
+          padding: 20px;
+          width: 500px;
+          height: 200px;
+          background:  #1e2524;
+          float: left;
+          padding-left: 40px;
+        }
+        .thanhtoan{
+          padding: 20px;
+          width: 500px;
+          height: 200px;
+          background:  #1e2524;
+          float: left;
+          padding-left: 40px;
+        }
+
+        @media screen and (max-width: 600px) {
+          .row {   
+            flex-direction: column;
+          }
+        }
+        
+        @media screen and (max-width: 600px) {
+          .navbar a {
+            float: none;
+            width: 100%;
+          }
+        }
+        @media screen and (max-width: 600px) {
+            .navbar .search-container {
+                float: none;
+            }
+            .navbar .search-container button {
+                float: none;
+                display: block;
+                text-align: left;
+                width: 100%;
+                margin: 0;
+                padding: 14px;
+            }
+        }
+
+        
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+        .text {
+          color: #f2f2f2;
+          background-color: #000000;
+          font-size: 25px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
+        .active {
+          background-color: #717171;
+        }
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+
+        .danhmuc {
+          width: 200px;
+        }
+        .danhmuc a {
+          color: black;
+          display: block; 
+          padding: 12px;
+          text-decoration: none;
+        }
+        .danhmuc a:hover {
+          background-color: #ccc;
+        }                                                     
+
+        .rowdm > .column {
+          padding: 15px;
+        }
+        .column {
+          float: left;
+          width: 25%;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          max-width: 250px;
+          margin: auto;
+          text-align: center;
+          font-family: arial;
+        }
+        .price {
+          color: grey;
+          font-size: 22px;
+        }
+        .column button {
+          border: none;
+          outline: 0;
+          padding: 12px;
+          color: rgb(0, 0, 0);
+          background-color: #e7bdd5;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;
+        }
+        .column button:hover {
+          opacity: 0.5;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+      <img src="logo.png"  width="7%">
+        <a style="font-size: 50px;">Cake ThyD</a>
+    </div>
+    
+    <div class="navbar">
+        <a href="index.html">TRANG CHỦ</a>
+        <a href="danhmuc.html">DANH MỤC</a>
+        <a href="gioithieu.html">GIỚI THIỆU SINH VIÊN VÀ DỰ ÁN</a>
+        <a href="dangky.html" class="right">Đăng ký</a>
+        <a id="shopping" class="fas fa-shopping-cart fa-2x" style="color: #000000;" href="giohang.html"></a>
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fas fa-search" style="color: #000000;"></i></button>
+            </form>
+        </div>
+        
+    </div>
+    <div class="row">
+      <div class="side">
+        <h2>DANH MỤC</h2>  
+        <div class="danhmuc">
+          <a href="banhngot.html">Bánh ngọt</a>
+          <a href="banhkho.html">Bánh khô</a>
+          <a href="banhmi.html">Bánh mì</a>
+        </div>
+      </div>
+      <div class="main">
+        <h2>Bánh ngọt</h2>
+        <div class="slideshow-container">
+          <div class="rowdm">
+            <div class="column">
+              <div class="content_dm">
+                <img src="banhcuonsocola.jpg" alt="banhcuon" style="width:100%">
+                <h3>Bánh cuộn socola</h3>
+                <p class="price">20,000đ <i class="fas fa-arrow-down" style="color: #ff0000;">15%</i></p>
+                <p><button><i class="fas fa-cart-plus" style="color: #000000;"></i></button></p>
+                <a href="chitietbanhcuonsocola.html">chi tiết</a>
+              </div>
+            </div>
+            <div class="column">
+              <div class="content_dm">
+                <img src="muffin.jpg" alt="muffin" style="width:100%; height: 82px;">
+                <h3>Bánh munffin socola</h3>
+                <p class="price">22,000đ</p>
+                <p><button><i class="fas fa-cart-plus" style="color: #000000;"></i></button></p>
+                <a href="chitietbanhmuffin.html">chi tiết</a>
+              </div>
+            </div>
+          </div>        
+        </div>     
+      </div>
+    </div>
+    <div class="footer">
+      <div class="gioithieu">
+        <h3>GIỚI THIỆU </h3>
+      <a style="font-size: 13px;">Mua bánh ngọt siêu ngon ở HCM tại Cake ThyD</a>
+        <br />
+      </div>
+      <div class="lienhe">
+        <h3>LIÊN HỆ</h3>
+        <i class="fas fa-phone-alt" style="color: #ffffff;"></i>
+        <a style="font-size: 13px;">0359041476 hoặc 0954989541</a>
+        <br />
+        <i class="fas fa-envelope" style="color: #ffffff;"></i>
+        <a style="font-size: 13px;">cake.thuyd@gmail.com</a>
+        <br />
+        <i class="fas fa-store" style="color: #ffffff;"></i>
+        <a style="font-size: 13px;">25 Nguyễn Đỗ Cung, phường Tây Thạnh, quận Tân Phú, TP.HCM</a>
+
+      </div>
+      <div class="thanhtoan">
+        <h3>PHƯƠNG THỨC THANH TOÁN</h3>
+        <img src="1.png">
+        <img src="2.png">
+        <img src="3.png">
+      </div>
+    </div>
+</body>
+</html>
